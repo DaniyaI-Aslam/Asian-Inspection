@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='stylesheet' href='https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css'>
+    <title>Home - Asian Inspection Service Private Ltd.</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="card_folder.css"> -->
+    <link rel="stylesheet" href="testimonial.css">
+    <link rel="stylesheet" href="materialize.min.css">
+
+    <style>
+        @font-face {
+            src: url("./poppins.ttf");
+            font-family: "Poppins";
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none !important;
+            font-family: "Poppins";
+        }
+
+        /* body {
+    background: #e3e9f7;
+} */
+
+
+        #insider {
+            left: -80px;
+            top: 95px;
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: red;
+            z-index: 1;
+            border-radius: 50%;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header {
+            /* width: 80%; */
+            height: 70px;
+            background: #fefefe;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            /* border-radius: 0 0 10px 10px; */
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 120px;
+            margin-top: 8px;
+            z-index: 2;
+        }
+
+
+        #contact_li {
+            position: relative;
+            display: inline-block;
+            padding: 7px 15px;
+            color: rgb(0, 255, 255);
+            text-transform: uppercase;
+            /* letter-spacing: 4px; */
+            font-size: 19px;
+            overflow: hidden;
+            transition: 0.2s;
+            font-weight: 1000;
+
+            /* border-radius: 20px; */
+        }
+
+        #contact_li:hover {
+            animation: none;
+        }
+
+        #contact_li span {
+            position: absolute;
+            display: block;
+        }
+
+        #contact_li span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgb(0, 255, 255));
+        }
+
+        #contact_li:hover span:nth-child(1) {
+            left: 100%;
+            transition: 1s;
+        }
+
+
+        #contact_li span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(270deg, transparent, rgb(0, 255, 255));
+        }
+
+        #contact_li:hover span:nth-child(3) {
+            right: 100%;
+            transition: 1s;
+            transition-delay: 0.5s;
+        }
+
+        #contact_li span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, rgb(0, 255, 255));
+        }
+
+        #contact_li:hover span:nth-child(2) {
+            top: 100%;
+            transition: 1s;
+            transition-delay: 0.25s;
+        }
+
+        #contact_li span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, rgb(0, 255, 255));
+        }
+
+        #contact_li:hover span:nth-child(4) {
+            bottom: 100%;
+            transition: 1s;
+            transition-delay: 0.75s;
+        }
+
+
+        #contact_li.active {
+            color: rgb(0, 255, 255);
+            background: #255784;
+            box-shadow: 0 0 10px #2196f3, 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
+            /* transition-delay: 1s; */
+            animation: none;
+        }
+
+        #contact_li:hover {
+            color: rgb(0, 255, 255);
+            background: #255784;
+            box-shadow: 0 0 10px #2196f3, 0 0 40px rgb(0, 255, 255), 0 0 80px rgb(0, 255, 255);
+            transition-delay: 1s;
+        }
+
+        #log {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav .logo {
+            display: none;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul .diff_li a {
+            color: #212526;
+            display: block;
+            margin: 0 2px;
+            font-weight: 600;
+            padding: 8px 18px;
+            transition: 0.2s;
+            border-radius: 30px;
+        }
+
+        nav ul .diff_li a:hover {
+            background: #f6f4ff;
+        }
+
+        nav ul .diff_li a.active {
+            color: #fff;
+            background: rgb(0, 255, 255);
+        }
+
+        .hamburger {
+            display: none;
+            height: fit-content;
+            cursor: pointer;
+            padding: 3px 8px;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+
+        .hamburger:hover {
+            background: #f6f4ff;
+        }
+
+        .hamburger .line {
+            width: 30px;
+            height: 2px;
+            margin: 6px 0;
+            background: #212526;
+        }
+
+        @media only screen and (max-width: 1400px) {
+
+            #third_div {
+                transform: scaleX(1.3) !important;
+                /* border-radius: 25% 25% 0 0 !important; */
+            }
+
+            header {
+                /* width: 90%; */
+                padding: 0 20px;
+            }
+
+            #log {
+                margin-left: 110px !important;
+            }
+
+            nav {
+                position: absolute;
+                left: -300px;
+                top: 0;
+                z-index: 999;
+                width: 280px;
+                height: 100vh;
+                background-color: #fefefe;
+                transition: 0.2s;
+                box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+            }
+
+            #nav_check:checked~nav {
+                left: 0;
+            }
+
+            nav .logo {
+                display: block;
+                height: 70px;
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+            }
+
+            nav ul {
+                display: block;
+                padding: 0 20px;
+                margin-top: 30px;
+            }
+
+            nav ul .diff_li a {
+                margin-bottom: 5px;
+                padding: 15px;
+                border-radius: 5px;
+            }
+
+            .hamburger {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            #third_div {
+                transform: 0 !important;
+                border-radius: 50% 50% 0 0 !important;
+            }
+
+
+        }
+
+
+        #child3 {
+
+            /* transform: translate(50%,0%); */
+            position: relative;
+            width: 450px;
+            height: 600px;
+            margin: 30px;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        #child3 .content {
+            padding: 20px;
+            text-align: center;
+            transition: 0.5s;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        #child3 .content #headi {
+            font-size: 3em !important;
+            color: #fff;
+            z-index: 1;
+            font-style: bold;
+            visibility: initial;
+            /* display: inline; */
+            opacity: 1;
+            transform: none;
+            margin-left: 0;
+        }
+
+        #child3 .content #para {
+            font-size: 20px !important;
+            padding-top: 30px;
+            transform: none;
+            font-family: 'Poppins';
+            font-size: 1.2em;
+            color: #ffffff;
+            /* z-index: 1; */
+            font-style: bold;
+            font-weight: 900;
+            visibility: initial;
+            /* display: inline; */
+            opacity: 1;
+            margin-left: 0;
+            padding-right: 0;
+        }
+
+
+        #child3 .content a {
+            transform: none;
+            margin-top: 30px;
+            opacity: 1;
+        }
+
+        .card {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            border-radius: 0px 10px 10px 0px;
+            background: #f4f4f4;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            perspective: 100em;
+            /* margin: 25px; */
+            box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.25) 0px -12px 30px, rgba(255, 255, 255, 0.25) 0px 4px 6px, rgba(255, 255, 255, 0.25) 0px 12px 13px, rgba(255, 255, 255, 0.25) 0px -3px 5px;
+        }
+
+        .cover {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            /* background: dodgerblue; */
+            transform-style: preserve-3d;
+            transform-origin: left;
+            transition: transform 1s;
+            border-radius: 0px 10px 10px 0px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .card:hover .cover {
+            transform: rotateY(-120deg);
+        }
+
+        .coverFront,
+        .coverBack {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .coverFront {
+            background: #202020;
+            text-align: center;
+            border-radius: 0px 10px 10px 0px;
+            color: #333;
+        }
+
+        .coverBack {
+            background: #202020;
+            border-radius: 10px 0px 0px 10px;
+            transform: rotateY(180deg);
+        }
+
+        .sh_img {
+            width: 100px;
+        }
+
+        #lett {
+            font-size: 24px !important;
+            word-spacing: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"
+            style="background: rgb(0, 255, 255);box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; width: 400px; height: 400px; border-radius: 50%; margin-left: -130px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+
+            <img id="log" src="main_logo.png" alt=""
+                style="margin-top: 175px !important;margin-left: 90px; width: 250px; height: 60px !important;">
+            <!-- <div style="width:100px;height: 100px;background: rgb(0, 255, 255);"></div> -->
+
+        </div>
+        <div id="insider"></div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <div class="logo">
+                <img src="main_logo.jpg" alt="">
+            </div>
+            <ul>
+                <li class="diff_li">
+                    <a href="#" class="active">HOME</a>
+                </li>
+                <li class="diff_li">
+                    <a href="#">ABOUT</a>
+                </li>
+                <li class="diff_li">
+                    <a href="#">SERVICES</a>
+                </li>
+                <li class="diff_li">
+                    <a href="#">LOCATIONS</a>
+                </li>
+                <li class="diff_li">
+                    <a href="#">BLOG </a>
+                </li>
+                <li class="diff_li">
+                    <a href="#">CAREERS</a>
+                </li>
+                <li>
+                    <a href="#" class="fade-in-out" id="contact_li">
+                        <span></span><span></span><span></span><span></span> CONTACT </a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </header>
+    <div id="loader-wrapper">
+        <div class="loader" id="Loaders"></div>
+        <h1 class="fade-in-out" id="heading">Loading..</h1>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <div id="first_div_wrapper">
+        <div id="first_div">
+            <div class="child1" style="overflow: hidden;">
+
+                <h1 class="ml15" style="margin-left: 50px;">
+                    <span class="word">Asian</span>
+                    <span class="word">Inspection</span><br>
+                    <span class="word">Services Private Limited.</span>
+                </h1>
+                <!-- <h1>Services Private Limited</h1> -->
+                <h1 class="ml11" style="margin-left: 50px;">
+                    <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span style="word-spacing: -6px !important;" class="letters">"Ensuring Quality Every Step of the
+                            Way!."</span>
+                    </span>
+                </h1>
+            </div>
+
+            <div class="child2">
+
+                <div class="card" style="box-shadow: rgba(38, 38, 38, 0.25) 0px 54px 55px, rgba(38, 38, 38, 0.25) 0px -12px 30px, rgba(38, 38, 38, 0.25) 0px 4px 6px, rgba(38, 38, 38, 0.25) 0px 12px 13px, rgba(38, 38, 38, 0.25) 0px -3px 5px;
+                background: black;width: 500px; height: 700px;margin-top: -100px;">
+                    <div style="padding: 20px;text-align: center;font-size:12px;">
+                        <div class="content" style="background: black;">
+                            <h1 id="headi" style="color: #fff;"> Quality Control Inspection</h1>
+                            <p id="para"
+                                style="color: rgb(255, 255, 255) !important; font-family: Poppins; font-size: 18px; opacity: 1; padding: 0; margin: 0; transform: none;transition: none;margin-top: 20px; margin-bottom: 20px;">
+                                Quality inspection is beneficial to both the buyers and sellers. It assures the buyer
+                                that the goods received meet contractual specifications, and the seller has confirmation
+                                that he/she has supplied goods that meet contractual specifications. It also prevents
+                                causes for misunderstanding between the buyer and seller.
+
+                                Quality control measures applied in the inspection process include:</p>
+
+                                <h4 style="color: #fff; font-size: 23px;">Acceptable Quality Limit</h4>
+                                <p id="para"
+                                style="color: rgb(255, 255, 255) !important; font-family: Poppins; font-size: 18px; opacity: 1; padding: 0; margin: 0; transform: none;transition: none;margin-top: 20px; margin-bottom: 20px;">
+                                   The Acceptable Quality Limit (AQL) is the least tolerable process average in percentage
+                                or ratio that is still considered acceptable; that is, it is at an Acceptable Quality
+                                Level. Closely related terms are the Rejectable Quality Limit and Rejectable Quality
+                                Level (RQL).</p>
+
+
+
+                        </div>
+                    </div>
+                    <div class="cover">
+                        <div class="coverFront">
+                            <div style="justify-content: center;align-items: center;padding: 10px;">
+                                <h5 style="color:white; font-size: 34px; margin-bottom: 50px;">What is Quality Control
+                                    Inspection?</h5>
+                                <!-- <iframe src="https://embed.lottiefiles.com/animation/66350"></iframe> -->
+                                <img src="./magnifier.png" alt="" class="sh_img" style="width: 200px;">
+                            </div>
+                        </div>
+                        <div class="coverBack"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="second_div">
+        <div id="circle1"></div>
+        <div id="circle2"></div>
+        <div id="child3">
+            <div class="content">
+                <h1 id="headi">Why Quality Assurance?</h1>
+                <p id="para">Quality assurance is a discipline, which has many aspects, but its main aim is to reduce
+                    risk and thus save money and time for the buyer. It is more than merely a matter of standards or
+                    certifications. It comes from a genuine commitment to the highest standards of excellence developed
+                    through extensive experience and specialized knowledge. The objective is reduction of risk.</p>
+
+                <a href="#" id="contact_li" class="fade-in-out"> <span></span><span></span><span></span><span></span>
+                    Read More </a>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div id="first_div_wrapper">
+
+        <div id="third_div"> </div>
+        <div id="fifth_div">
+            <!-- <div class="child4"> -->
+
+            <h1 id="service_head">Services</h1>
+
+            <div id="home-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-one">
+                            <div class="swiper-image" data-swiper-parallax-y="-20%">
+                                <div class="swiper-image-inner swiper-image-left swiper-image-one">
+                                    <h1 class="forservices"><span class="emphasis">Pre-Shipment
+                                        </span><br><span>Inspection.</span></h1>
+                                    <!-- <p>Chapter I, page XV</p> -->
+                                </div>
+                            </div>
+                            <div class="swiper-image" data-swiper-parallax-y="35%">
+                                <div class="swiper-image-inner swiper-image-right swiper-image-two">
+                                    <p class="paragraph">
+                                        Pre-Shipment Inspection takes place before the ordered goods are shipped by
+                                        the supplier to buyer. A
+                                        Pre-Shipment Inspection is a step taken by trade operators (buyers,
+                                        suppliers, agencies) to inspect
+                                        newly manufactured products before they are shipped to buyer. A Pre-Shipment
+                                        Inspection (PSI) is a
+                                        random inspection comprising a detailed inspection of finished goods before
+                                        shipment.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-two">
+                            <div class="swiper-image" data-swiper-parallax-y="-20%">
+                                <div class="swiper-image-inner swiper-image-left swiper-image-three">
+                                    <h1 class="forservices"><span class="emphasis">Cargo Loading-Unloading</span>
+                                        <br><span>Supervison.</span>
+                                    </h1>
+                                    <!-- <p>Chapter II, page VII</p> -->
+                                </div>
+                            </div>
+                            <div class="swiper-image" data-swiper-parallax-y="35%">
+                                <div class="swiper-image-inner swiper-image-right swiper-image-four">
+                                    <p class="paragraph">
+                                        A variety of activities combine to conduct this inspection and one
+                                        inspection may differ from the
+                                        other due to type of commodity, mode of packaging (Bulk or individual pack)
+                                        and shipper/buyer
+                                        contract.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-three">
+                            <div class="swiper-image" data-swiper-parallax-y="-20%">
+                                <div class="swiper-image-inner swiper-image-left swiper-image-five">
+                                    <h1 class="forservices"><span class="emphasis">Draught, Hatch &
+                                            Bulk</span><br><span>Cargo
+                                            Surveys</span></h1>
+                                    <!-- <p>Chapter III, page XI</p> -->
+                                </div>
+                            </div>
+                            <div class="swiper-image" data-swiper-parallax-y="35%">
+                                <div class="swiper-image-inner swiper-image-right swiper-image-six">
+                                    <p class="paragraph">
+                                        Bulk cargo is normally a commodity cargo that is transported unpackaged in
+                                        large quantities. It refers
+                                        to material in either liquid or granular, particulate form, as a mass of
+                                        relatively small solids, such
+                                        as petroleum/crude oil/edible oil, grain, coal, and other such items.
+
+                                        From grains to coal and from sugar to cocoa, dry bulk cargoes cover a range
+                                        of produce and raw
+                                        materials that have two features in common: they are unpacked and are
+                                        homogeneous.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-four">
+                            <div class="swiper-image" data-swiper-parallax-y="-20%">
+                                <div class="swiper-image-inner swiper-image-left swiper-image-seven">
+                                    <h1 class="forservices"><span class="emphasis">Expediting Service</span>.
+                                        <br><span></span>
+                                    </h1>
+                                    <!-- <p>Chapter III, page XI</p> -->
+                                </div>
+                            </div>
+                            <div class="swiper-image" data-swiper-parallax-y="35%">
+                                <div class="swiper-image-inner swiper-image-right swiper-image-eight">
+                                    <p class="paragraph">
+                                        Expediting is a concept in purchasing and project management for securing
+                                        the quality and timely
+                                        delivery of goods and components. Asian Inspection provides a proactive and
+                                        cost-effective expediting
+                                        service through the company`s network of experienced field expediters
+                                        located close to most major
+                                        manufacturing centers in Pakistan and India. They visit supplier factories
+                                        to ensure that the
+                                        established production schedule is fully respected and that the contractual
+                                        delivery dates will be
+                                        met. However, this should not mean compromises in other contractual
+                                        obligations. This is where
+                                        proactive monitoring is most essential.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-five">
+                            <div class="swiper-image" data-swiper-parallax-y="-20%">
+                                <div class="swiper-image-inner swiper-image-left swiper-image-nine">
+                                    <h1 class="forservices"><span class="emphasis">Factory Evaluation & </span>
+                                        <br><span>Audit.</span>
+                                    </h1>
+                                    <!-- <p>Chapter III, page XI</p> -->
+                                </div>
+                            </div>
+                            <div class="swiper-image" data-swiper-parallax-y="35%">
+                                <div class="swiper-image-inner swiper-image-right swiper-image-ten">
+                                    <p class="paragraph">
+                                        We have expertise and experience in conducting audit to evaluate supplier’s
+                                        facilities and production
+                                        capacity, their management system and operating procedures, ensuring that
+                                        appropriate suppliers are
+                                        being selected and that quality specifications are understood and being met.
+                                        Depending on customer
+                                        requirements the areas generally covered in Factory Evaluation Audits .
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-six">
+                            <div class="swiper-image" data-swiper-parallax-y="-20%">
+                                <div class="swiper-image-inner swiper-image-left swiper-image-eleven">
+                                    <h1 class="forservices"><span class="emphasis">Social Compliance Verification
+                                        </span> <br>&
+                                        <span>Audit.</span>
+                                    </h1>
+                                    <!-- <p>Chapter III, page XI</p> -->
+                                </div>
+                            </div>
+                            <div class="swiper-image" data-swiper-parallax-y="35%">
+                                <div class="swiper-image-inner swiper-image-right swiper-image-twelve">
+                                    <p class="paragraph">
+                                        Asian Inspection has experience in social compliance verification audit of
+                                        factories, especially
+                                        textile mills and apparel / garment factories. Guidelines and checklist
+                                        provided by the
+                                        internationally accepted SA8000 Standard form the basis for such audits.
+
+                                        While the client/importer decides about which social audit framework to
+                                        apply to their supplier
+                                        depending on their own needs and priorities, many auditing companies
+                                        recommend an audit based on the
+                                        SA8000 standard for its comprehensive coverage, relative simplicity and
+                                        clearly outlined requirements.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+
+
+    </div>
+    <div id="first_div_wrapper">
+        <div id="seventh_div">
+            <!-- <h1 class="ml3">Client Testimonials</h1> -->
+            <h1 class="ml6">
+                <span class="text-wrapper">
+                    <span class="letters">Client Testimonials</span>
+                </span>
+            </h1>
+        </div>
+
+    </div>
+
+    <div style="width: 100%;height: 100px;margin-top: -200px; ">
+        <div id="circle3"></div>
+        <div id="circle4"></div>
+    </div>
+    <div id="first_div_wrapper">
+        <div id="sixth_div">
+
+            <div class="carousel">
+                <a class="carousel-item" href="#">
+                    <div class="testi">
+                        <div class="img-area">
+                            <img src="1.jpg">
+                        </div>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus veritatis repellendus
+                            delectus,
+                            est, alias recusandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                            veritatis repellendus
+                            delectus,
+                            est, alias recusandae."</p>
+                        <h4>Jessica Jones</h4>
+                        <h5>Head of Department</h5>
+                    </div>
+                </a>
+                <a class="carousel-item" href="#">
+                    <div class="testi">
+                        <div class="img-area">
+                            <img src="1.jpg">
+                        </div>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus veritatis repellendus
+                            delectus,
+                            est, alias recusandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                            veritatis repellendus
+                            delectus,
+                            est, alias recusandae."</p>
+                        <h4>Jessica Jones</h4>
+                        <h5>Manager Head</h5>
+                    </div>
+                </a>
+                <a class="carousel-item" href="#">
+                    <div class="testi">
+                        <div class="img-area">
+                            <img src="1.jpg">
+                        </div>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus veritatis repellendus
+                            delectus,
+                            est, alias recusandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                            veritatis repellendus
+                            delectus,
+                            est, alias recusandae."</p>
+                        <h4>Jessica Jones</h4>
+                        <h5>Team Lead</h5>
+                    </div>
+                </a>
+                <a class="carousel-item" href="#">
+                    <div class="testi">
+                        <div class="img-area">
+                            <img src="1.jpg">
+                        </div>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus veritatis repellendus
+                            delectus,
+                            est, alias recusandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                            veritatis repellendus
+                            delectus,
+                            est, alias recusandae."</p>
+                        <h4>Jessica Jones</h4>
+                        <h5>Scrum Master</h5>
+                    </div>
+                </a>
+                <a class="carousel-item" href="#">
+                    <div class="testi">
+                        <div class="img-area">
+                            <img src="1.jpg">
+                        </div>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus veritatis repellendus
+                            delectus,
+                            est, alias recusandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                            veritatis repellendus
+                            delectus,
+                            est, alias recusandae."</p>
+                        <h4>Jessica Jones</h4>
+                        <h5>Team Lead</h5>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="first_div_wrapper">
+        <div class="eight">
+            <h1 class="flip">
+                <span class="text-wrapper">
+                    <span class="letters" style="font-weight: 800;">Our&nbsp;Clients</span>
+                </span>
+            </h1>
+            <!-- <h1 >Our Clients</h1> -->
+        </div>
+    </div>
+    <div class="slid">
+        <div class="sli">
+
+            <img src="./logo1.png" alt="">
+            <img src="./logo2.png" alt="">
+            <img src="./logo3.png" alt="">
+            <img src="./logo4.png" alt="">
+            <img src="./logo5.png" alt="">
+            <img src="./logo1.png" alt="">
+            <img src="./logo2.png" alt="">
+            <img src="./logo3.png" alt="">
+        </div>
+        <div class="sli">
+
+            <img src="./logo1.png" alt="">
+            <img src="./logo2.png" alt="">
+            <img src="./logo3.png" alt="">
+            <img src="./logo4.png" alt="">
+            <img src="./logo5.png" alt="">
+            <img src="./logo1.png" alt="">
+            <img src="./logo2.png" alt="">
+            <img src="./logo3.png" alt="">
+        </div>
+    </div>
+    <!-- </div> -->
+    <div id="fourth_div">
+
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>Find us</h4>
+                                    <span>B-32, B-10A Gulshan-e-Iqbal, Karachi </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Call us</h4>
+                                    <span>012345678900</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Mail us</h4>
+                                    <span>mail@asian.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="main_logo.png" class="img-fluid" alt="logo"></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>PRE-SHIPMENT INSPECTION, COTTON CONTROLLING & FACTORY AUDITS
+                                        Performed in Pakistan, India, Sri-Lanka, UAE, Turkey, China, Vietnam, USA,
+                                        Brazil & Other Locations Worldwide.</p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <span>Follow us</span>
+                                    <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                    <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">about</a></li>
+                                    <li><a href="#">services</a></li>
+                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Expert Team</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Our Company Location Map</h3>
+                                </div>
+                                <div class="card">
+                                    <div style="padding: 20px;text-align: center;font-size:12px;">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.7852741175684!2d67.10778125101294!3d24.90530494951306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33913357f80e1%3A0x2feec5e15e423e1a!2sAsian%20Inspection%20Services%20(PVT)%20Ltd!5e0!3m2!1sen!2s!4v1677913839457!5m2!1sen!2s"
+                                            width="330" height="330" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                    <div class="cover">
+                                        <div class="coverFront">
+                                            <div>
+                                                <h5 style="color:white;">Our Location</h5>
+                                                <img src="./Group 1.png" alt="" class="sh_img">
+                                            </div>
+                                        </div>
+                                        <div class="coverBack"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2023, All Right Reserved <a href="https://asianqa.com">Asian
+                                        Inspection Service Private Ltd.</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js'></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+
+<!-- <script src="./swiper.min.js"></script> -->
+<!-- <script>
+    var swiper = new Swiper('.swiper-container1', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows : true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
+</script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script>
+<script src="./main.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            padding: 200
+        });
+        autoplay();
+        function autoplay() {
+            $('.carousel').carousel('next');
+            setTimeout(autoplay, 4500);
+        }
+    });
+</script>
+
+</html>
